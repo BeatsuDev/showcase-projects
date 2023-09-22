@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>3D JS Engine</title>
+	<style>
+		* {
+			overflow: hidden;
+			padding: 0; margin: 0;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		canvas {
+			background-color: #aaa;
+		}
+	</style>
+</head>
+<body>
+
+<canvas id="mainScene"></canvas>
+<script>
+	const canvas = document.getElementById("mainScene");
+	const ctx = canvas.getContext("2d");
+
+	canvas.height = window.innerHeight;
+	canvas.width = window.innerWidth;
+
+	window.onresize = e => {
+		canvas.height = window.innerHeight;
+		canvas.width = window.innerWidth;
+	}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.0/math.js"></script>
+<script src="controls.js"></script>
+<script src="vector.js"></script>
+<script src="threedee.js"></script>
+<script src="shapes.js"></script>
+
+</body>
+</html>
