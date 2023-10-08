@@ -10,7 +10,7 @@ and in the correct order). The program should be able to read and validate sourc
 My solution is Θ(n).
 
 ## Notes
-The error messages output the char code as a u8. For example, ( = 40. ) = 41. \[ = 91, \] = 93.
+The error messages output the char code as a u8. For example, `(` = 40. `)` = 41. `[` = 91, `]` = 93.
 
 Simplest way to install zig is through a package manager:
 https://github.com/ziglang/zig/wiki/Install-Zig-from-a-Package-Manager
