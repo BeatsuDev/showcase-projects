@@ -1,0 +1,17 @@
+echo Enter an input file name: 
+read INPUT_FILE
+
+echo "Compressing with LZ..."
+python lz.py $INPUT_FILE compressed.lempelziv
+python huffman.py compressed.lempelziv compressed.lyx
+python huffman.py compressed.lyx decompressed.huffman -d
+python lz.py decompressed.huffman decompressed.lyx -d
+
+echo Difference between files:
+diff $INPUT_FILE decompressed.lyx --text
+
+echo Compressed file size:
+stat --printf="compressed bytes size: %s " compressed.lyx
+SIZE1=$(stat -c "%s" "$INPUT_FILE")
+SIZE2=$(stat -c "%s" "compressed.lyx")
+python -c "print(f'({$SIZE2 / $SIZE1 * 100:.2f}% of original size)')"
