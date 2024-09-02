@@ -4,7 +4,7 @@ The task here was to create a rotatable rubiks cube using OpenGL. To get this ru
 freeglut3-dev `sudo apt install freeglut3-dev`. You might also need more libraries... Tested only on
 Ubuntu Budgie 22.04
 
-Compile with gcc: `gcc -lGL -lGLU -lglut -o main main.c`
+Compile with gcc: `gcc -o main main.c -lGL -lGLU -lglut -lm`
 
 Not all rotation animations were finished implemented, but the rotations should work (just without
 animations). This project was only to get started with OpenGL, and once I got
