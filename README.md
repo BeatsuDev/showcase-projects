@@ -1,2 +1,2 @@
-# Programming Interests Showcase Repository
-A collection of projects to showcase my interests in programming.
+# Local projects archive
+An archive of projects I've had lying around on my computer
